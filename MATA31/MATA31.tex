@@ -1,0 +1,184 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{lipsum}
+\usepackage{venndiagram}
+\usepackage{booktabs}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arcCot}
+\DeclareMathOperator{\arccsc}{arcCsc}
+\DeclareMathOperator{\arccosh}{arcCosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arcCsch}
+\DeclareMathOperator{\arccoth}{arcCoth}
+\graphicspath{ {./images/} }
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+  \vspace{5cm}
+
+  {\textbf{MATA31}}\\
+
+  Calculus 1, for Mathematical Sciences, Fall 2018
+
+  \hrulefill
+  \vspace{0.3cm}
+
+  \textbf{\huge Various Core Proofs/Identities}
+
+  \hrulefill
+
+  \begin{tabular}{ll}
+  Current Instructor: & Natalia Breuss\\
+  \end{tabular}
+
+  \vspace{0.5cm}
+
+  \includegraphics[scale = 0.25]{UTSC}
+
+  \vspace{5cm}
+
+  \end{center}
+
+  \textbf{Instructor(s):}
+
+  \begin{center}
+
+  \begin{tabular}{ll}
+   &\textbf{Dr. Natalia Breuss}\\
+  \textbf{Email:} & n.breuss@utoronto.ca\\
+  \textbf{Office:} & IC484\\
+  \textbf{Office Hours:}& Wednesday 11:00 - 13:00\\
+  \end{tabular}
+
+  \end{center}
+
+\end{titlepage}
+\pagestyle{fancy}
+
+\vspace{0.5cm}
+\chead{Richard Hong}
+\lhead{MATA31 - Core Proofs/Identities}
+\rhead{\leftmark}
+\cfoot{}
+\rfoot{Page \thepage}
+
+\text{}
+
+\section{Identities}
+\begin{center}
+
+\textbf{Basic Trigonometric Identiteis}
+
+\begin{minipage}{0.3\linewidth}
+Reciprocal Identities\\
+\begin{tabular}{l}
+$(\sin x)^{-1} = \csc x$\\
+$(\cos x)^{-1} = \sec x$\\
+$(\tan x)^{-1} = \cot x$
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+Pythagorean Identities\\
+\begin{tabular}{l}
+$\sin^2 x + \cos^x = 1$\\
+$\tan^2 x + 1 = \sec^2 x$\\
+$1 + \cot^2 x = \csc^2 x$
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+Angle Addition Identities\\
+\begin{tabular}{l}
+$\sin(x \pm y) = \sin x \cdot \cos y \pm \cos x \cdot \sin y$\\
+$\cos(x + y) = \cos x \cdot \cos y - \sin x \cdot \sin y$\\
+$\cos(x - y) = \cos x \cdot \cos y + \sin x \cdot \sin y$\\
+$\tan(x + y) = \displaystyle\frac{\tan x + \tan y}{1 - \tan x \cdot \tan y}$\\
+$\tan(x - y) = \displaystyle\frac{\tan x - \tan y}{1 + \tan x \cdot \tan y}$
+\end{tabular}
+\end{minipage}
+
+\vspace{0.5cm}
+
+\textbf{Hyperbolic Trigonometric Identities}
+
+\vspace{0.3cm}
+
+\begin{tabular}{ll}
+$\sinh x = \dfrac{e^x - e^{-x}}{2}$ & $\csch x = \dfrac{2}{e^x - e^{-x}}$\\
+ $\cosh x = \dfrac{e^x + e^{-x}}{2}$ & $\sech x = \dfrac{2}{e^x + e^{-x}}$\\
+ $\tanh x = \dfrac{e^x - e^{-x}}{e^x + e^{-x}}$ & $\coth x = \dfrac{e^x + e^{-x}}{e^x - e^{-x}}$
+\end{tabular}
+
+\vspace{0.5cm}
+
+\textbf{Derivatives of Trigonometric Functions}
+
+\vspace{0.3cm}
+
+\begin{minipage}{0.4\linewidth}
+Derivative of Trigonometric Functions\\
+\begin{tabular}{ll}
+$(\sin x)' = \cos x$ & $(\csc x)' = -\csc x \cot x$\\
+$(\cos x)' = -\sin x$ & $(\sec x)' = \sec x \tan x$\\
+$(\tan x)' = \sec^2 x$ & $(\cot x)' = -\csc^2 x$
+\end{tabular}
+\end{minipage}
+\hspace{0.3cm}
+\begin{minipage}{0.55\linewidth}
+Derivative of Hyperbolic Trigonometric Functions\\
+\begin{tabular}{ll}
+$(\sinh x)' = \cosh x$ & $(\csch x)' = -\csch x \cdot \coth x$\\
+$(\cosh x)' = \sinh x$ & $(\sech x)' = -\sech x \cdot \tanh x$\\
+$(\tanh x)' = \sech^{2} x$ & $(\coth x)' = -\csch^2 x$\\
+\end{tabular}
+\end{minipage}
+
+\vspace{0.5cm}
+
+\begin{minipage}{0.5\linewidth}
+  Derivative of Inverse Trigonometric Functions\\
+\begin{tabular}{ll}
+$(\sin^{-1} x)' = \displaystyle\frac{1}{\sqrt{1-x^2}}$ & $(\csc^{-1} x )' = \displaystyle - \frac{1}{|x|\sqrt{x^2 - 1}}$\\
+$(\cos^{-1} x)' = - \displaystyle\frac{1}{\sqrt{1-x^2}}$ & $(\sec^{-1} x )' = \displaystyle - \frac{1}{|x|\sqrt{x^2 - 1}}$\\
+$(\tan^{-1} x )' = \displaystyle\frac{1}{1+x^2}$ & $(\cot^{-1} x )' = -\displaystyle\frac{1}{1 + x^2}$
+\end{tabular}
+\end{minipage}
+
+\end{center}
+
+\section{Uniqueness of Limits}
+
+\begin{center}
+{\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{l}
+$\displaystyle \lim_{x \to c} f(x) = L \land \lim_{x \to c} f(x) = M \Longrightarrow L = M$\\
+\textbf{Proof:}\\
+Suppose the contrary that:\\
+$\displaystyle \lim_{x \to c} f(x) = L \land \lim_{x \to c} f(x) = M, L \neq M$\\
+Assume that $L > M, L = M + K$, WLOG\\
+Let's choose $\epsilon = \displaystyle\frac{k}{2}$, this way the intervals do not overlap.\\
+$\displaystyle \lim_{x \to c} f(x) = L: \exists \delta_1 > 0, \ni: 0 < |x - c| < \delta_1 \rightarrow |f(x) - L| < \epsilon$\\
+$\displaystyle \lim_{x \to c} f(x) = M: \exists \delta_2 > 0, \ni: 0 < |x - c| < \delta_2 \rightarrow |f(x) - M| < \epsilon$\\
+Let $\delta = min(\delta_1, \delta_2)$ so that for any $\delta > 0$, $f(x) \in (M - \epsilon, M + \epsilon)$ and $f(x) \in (L - \epsilon, L + \epsilon)$.\\
+Contradiction: This is impossible since we set $\epsilon = \displaystyle\frac{k}{2}$ to guarantee intervals do not overlap.\\
+Therefore, $\displaystyle \lim_{x \to c} f(x) = L \land \lim_{x \to c} f(x) = M \Longrightarrow L = M$ by contradiction.
+\end{tabular}}
+\end{center}
+\marginpar{$QED$}
+
+
+\end{document}
