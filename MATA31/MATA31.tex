@@ -82,7 +82,7 @@
 \section{Identities}
 \begin{center}
 
-\textbf{Basic Trigonometric Identiteis}
+\textbf{Basic Trigonometric Identities}
 
 \begin{minipage}{0.3\linewidth}
 Reciprocal Identities\\
@@ -117,11 +117,12 @@ $\tan(x - y) = \displaystyle\frac{\tan x - \tan y}{1 + \tan x \cdot \tan y}$
 
 \vspace{0.3cm}
 
+{\renewcommand{\arraystretch}{2}
 \begin{tabular}{ll}
 $\sinh x = \dfrac{e^x - e^{-x}}{2}$ & $\csch x = \dfrac{2}{e^x - e^{-x}}$\\
  $\cosh x = \dfrac{e^x + e^{-x}}{2}$ & $\sech x = \dfrac{2}{e^x + e^{-x}}$\\
  $\tanh x = \dfrac{e^x - e^{-x}}{e^x + e^{-x}}$ & $\coth x = \dfrac{e^x + e^{-x}}{e^x - e^{-x}}$
-\end{tabular}
+\end{tabular}}
 
 \vspace{0.5cm}
 
@@ -130,7 +131,9 @@ $\sinh x = \dfrac{e^x - e^{-x}}{2}$ & $\csch x = \dfrac{2}{e^x - e^{-x}}$\\
 \vspace{0.3cm}
 
 \begin{minipage}{0.4\linewidth}
-Derivative of Trigonometric Functions\\
+
+\centerline{Derivative of Trigonometric Functions}
+
 \begin{tabular}{ll}
 $(\sin x)' = \cos x$ & $(\csc x)' = -\csc x \cot x$\\
 $(\cos x)' = -\sin x$ & $(\sec x)' = \sec x \tan x$\\
@@ -139,7 +142,9 @@ $(\tan x)' = \sec^2 x$ & $(\cot x)' = -\csc^2 x$
 \end{minipage}
 \hspace{0.3cm}
 \begin{minipage}{0.55\linewidth}
-Derivative of Hyperbolic Trigonometric Functions\\
+
+\centerline{Derivative of Hyperbolic Trigonometric Functions}
+
 \begin{tabular}{ll}
 $(\sinh x)' = \cosh x$ & $(\csch x)' = -\csch x \cdot \coth x$\\
 $(\cosh x)' = \sinh x$ & $(\sech x)' = -\sech x \cdot \tanh x$\\
@@ -149,8 +154,10 @@ $(\tanh x)' = \sech^{2} x$ & $(\coth x)' = -\csch^2 x$\\
 
 \vspace{0.5cm}
 
-\begin{minipage}{0.5\linewidth}
-  Derivative of Inverse Trigonometric Functions\\
+\begin{minipage}{0.45\linewidth}
+
+\centerline{Derivative of Inverse Trigonometric Functions}
+
 \begin{tabular}{ll}
 $(\sin^{-1} x)' = \displaystyle\frac{1}{\sqrt{1-x^2}}$ & $(\csc^{-1} x )' = \displaystyle - \frac{1}{|x|\sqrt{x^2 - 1}}$\\
 $(\cos^{-1} x)' = - \displaystyle\frac{1}{\sqrt{1-x^2}}$ & $(\sec^{-1} x )' = \displaystyle - \frac{1}{|x|\sqrt{x^2 - 1}}$\\
@@ -158,7 +165,64 @@ $(\tan^{-1} x )' = \displaystyle\frac{1}{1+x^2}$ & $(\cot^{-1} x )' = -\displays
 \end{tabular}
 \end{minipage}
 
+\pagebreak
+
+\text{}
+
+\vspace{0.7cm}
+
+
+\textbf{Derivatives of common functions}
+
+
+\begin{minipage}{0.4\textwidth}
+  \begin{tabular}{l}
+$\dfrac{d}{dx} \ln x = \dfrac{1}{x}$\\
+\\
+$\dfrac{d}{dx} e^x = e^x \cdot \ln(e)$\\
+\\
+$\dfrac{d}{dx} e^{2x} = e^x \cdot \ln(e) \cdot \dfrac{d}{dx} x = e^x \cdot 2x$
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{tabular}{ll}
+$\dfrac{d}{dx} x^n = nx^{(n-1)}$ & $\dfrac{d}{dx} f \cdot g = f'\cdot g + g' \cdot f$\\
+\\
+$\dfrac{d}{dx} f + h = f' + h'$ & $\dfrac{d}{dx} \dfrac{f}{g} = \dfrac{g\cdot f' - f \cdot g'}{g^2}$\\
+\\
+$\dfrac{d}{dx} f(g) = f'(g) \cdot g'$
+\end{tabular}
+\end{minipage}
+
+
 \end{center}
+
+\section{Derivative of Trigonometric functions}
+
+\begin{minipage}{0.45\linewidth}
+\begin{tabular}{l}
+$y = \sin^{-1}(x) \Longleftrightarrow \sin(y) = x$\\
+$\dfrac{d}{dx} \sin(y) = \dfrac{d}{dx} x$\\
+$\cos y \cdot y' = 1$\\
+$y' = \dfrac{1}{\cos y}$\\
+\textbf{Identity:} $cos^2 y = 1 - sin^2 y$\\
+$y' = \dfrac{1}{1 - \sin^2 y} , \sin y = x$\\
+$y' = \dfrac{1}{1 - x^2}'$
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{tabular}{l}
+$y = \sinh^{-1} (x) \Longleftrightarrow \sinh y = x$\\
+$x = \dfrac{e^y - e^{-y}}{2}$ \hspace {0.5cm} $2x = e^y - \dfrac{1}{e^y}$\\
+$2x \cdot e^y = e^{2y} - 1$ \hspace{0.5cm} $e^2y - (2x)e^y - 1= 0$\\
+Let $a = e^y$\\
+$a^2 - (2x)a - 1 = 0$\\
+$a = \dfrac{2x \pm \sqrt{(2x^2) - 4(1)(-1)}}{2}$\\
+$a = x \pm \sqrt{x^2 + 1}$\\
+$e^y > 0 \rightarrow a = x + \sqrt{X^2 + 1}$\\
+$\therefore y' = \ln(x + \sqrt{X^2 + 1})$
+\end{tabular}
+\end{minipage}
 
 \section{Uniqueness of Limits}
 
@@ -178,7 +242,84 @@ Contradiction: This is impossible since we set $\epsilon = \displaystyle\frac{k}
 Therefore, $\displaystyle \lim_{x \to c} f(x) = L \land \lim_{x \to c} f(x) = M \Longrightarrow L = M$ by contradiction.
 \end{tabular}}
 \end{center}
+
 \marginpar{$QED$}
 
+\pagebreak
+
+\text{}
+
+
+\section{Mean Value Theorem}
+
+\begin{tabular}{l}
+if function f is continuous across $[a,b]$ and differentiable across$(a,b)$\\
+then, there exists atleast one $c \in (a,b)$ such that $f'(c) = \dfrac{f(b) - f(a)}{b - a}$\\
+This means if the conditions satisfy, there will be atleast one point c where the instataneous\\
+rate of change is the same as the average rate of change.\\
+\end{tabular}
+
+\section{Applications of MVT}
+
+Suppose $f(x)$ is continuous on $[1,5]$ and differentiable on (1,5) and $f'(x) < \dfrac{3}{8}, \forall x \in (1,5)$. If $f(1) = 1$, show that $f(x) < \dfrac{5}{2}, \forall x \in [1.5]$
+
+Since f is continuous and differentiable...by Mean Value Theorem, $\exists c \in (1,5), \ni: f'(c) = \dfrac{f(5) - f(1)}{5-1}$
+
+let $x \in (1,5), f'(x) = \dfrac{f(x) - f(1)}{x-1} < \dfrac{3}{8} \Longleftrightarrow \dfrac{f(x) - 1}{x - 1} < \dfrac{3}{8}$
+
+$f(x) - 1 < \dfrac{3}{8}(x - 1)$, $f(x) < \dfrac{3}{8} (x-1) + 1$
+
+$f(x) < \dfrac{3}{8}(5 - 1) + 1 \rightarrow f(x) < \dfrac{5}{2}$ \marginpar{$QED$}
+
+\vspace{1cm}
+
+Suppose $f(x)$ is odd for all x and diff across every real number. Prove that for every positive number b, there exists a positive number c, in $(-b,b)$ such that $f'(c) = \dfrac{f(b)}{b}$
+
+Given $b > 0, f(-x) = - f(x)$
+
+since $f$ is differentiable on $(-\infty,\infty) \Longrightarrow f $ is continuous on $(-\infty,\infty)$
+
+$f$ is cont on [-b,b] and differentiable on (-b,b)
+
+becuase (-b,b)$\subset(-\infty, \infty)$,
+
+By MVT, $\exists c \in (-b , b) \ni: f'(c) = \dfrac{f(b) - f(-b)}{b - (-b)} = \dfrac{f(b) + f(b)}{b + b} = \dfrac{f(b)}{b}$
+
+\section{Rolle's Theorem}
+
+Suppose f is continuous on [a,b] and differentiable on (a,b) and $f(a) = f(b)$ then there exists atleast a $c \in (a,b)$ such that $f'(c) = 0$
+
+\section{Applications of Rolle's Theorem}
+
+Show that the function $2x + \cos x$ has exactly one real root.
+
+Let $f(x) = 2x + \cos x$
+
+$f(- \pi) = -2\pi + \cos(-\pi) = -2pi - 1 < 0$
+
+$f(0) = 2 + \cos(0) = 1 > 0$
+
+Since $f(x)$ is a sum of a polynomial and periodic trigonometric function, f is continuous and differentiable for all x, By IVT, $\exists c \in (-\pi ,0) \ni: f(c) = 0$
+
+Suppose $f(x)$ ias two roots  on a,b a < b, then $f(a) = f(b) = 0$, Since f is continuous on [a,b] and differentiable on open interval (a,b).
+
+By Rolle's Theorem $\exists r \in (a,b) \ni: f'(r) = 0$
+
+$f'(x) = 2 - \sin(x) > 0$, Contradiction, rolles theorem fails and therefore there must be exactly one root and one root only. \marginpar{$QED$}
+
+\pagebreak
+
+\text{}
+
+\section{Fermat's Theorem}
+
+
+If $f$ has a local min/max at x = c and $f'(c)$ exists, then f'(c) = 0.
+
+$f'(x) = 0$ or undefined for c-pts:
+
+$f'(x) > 0 \Rightarrow f(x)$ is increasing
+
+$f'(x) < 0 \Rightarrow f(x)$ is decreasing
 
 \end{document}
