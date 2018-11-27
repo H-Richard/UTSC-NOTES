@@ -197,32 +197,7 @@ $\dfrac{d}{dx} f(g) = f'(g) \cdot g'$
 
 \end{center}
 
-\section{Derivative of Trigonometric functions}
 
-\begin{minipage}{0.45\linewidth}
-\begin{tabular}{l}
-$y = \sin^{-1}(x) \Longleftrightarrow \sin(y) = x$\\
-$\dfrac{d}{dx} \sin(y) = \dfrac{d}{dx} x$\\
-$\cos y \cdot y' = 1$\\
-$y' = \dfrac{1}{\cos y}$\\
-\textbf{Identity:} $cos^2 y = 1 - sin^2 y$\\
-$y' = \dfrac{1}{1 - \sin^2 y} , \sin y = x$\\
-$y' = \dfrac{1}{1 - x^2}'$
-\end{tabular}
-\end{minipage}
-\begin{minipage}{0.5\linewidth}
-\begin{tabular}{l}
-$y = \sinh^{-1} (x) \Longleftrightarrow \sinh y = x$\\
-$x = \dfrac{e^y - e^{-y}}{2}$ \hspace {0.5cm} $2x = e^y - \dfrac{1}{e^y}$\\
-$2x \cdot e^y = e^{2y} - 1$ \hspace{0.5cm} $e^2y - (2x)e^y - 1= 0$\\
-Let $a = e^y$\\
-$a^2 - (2x)a - 1 = 0$\\
-$a = \dfrac{2x \pm \sqrt{(2x^2) - 4(1)(-1)}}{2}$\\
-$a = x \pm \sqrt{x^2 + 1}$\\
-$e^y > 0 \rightarrow a = x + \sqrt{X^2 + 1}$\\
-$\therefore y' = \ln(x + \sqrt{X^2 + 1})$
-\end{tabular}
-\end{minipage}
 
 \section{Uniqueness of Limits}
 
@@ -245,11 +220,6 @@ Therefore, $\displaystyle \lim_{x \to c} f(x) = L \land \lim_{x \to c} f(x) = M 
 
 \marginpar{$QED$}
 
-\pagebreak
-
-\text{}
-
-
 \section{Mean Value Theorem}
 
 \begin{tabular}{l}
@@ -258,6 +228,11 @@ then, there exists atleast one $c \in (a,b)$ such that $f'(c) = \dfrac{f(b) - f(
 This means if the conditions satisfy, there will be atleast one point c where the instataneous\\
 rate of change is the same as the average rate of change.\\
 \end{tabular}
+
+
+\pagebreak
+
+\text{}
 
 \section{Applications of MVT}
 
@@ -289,7 +264,7 @@ By MVT, $\exists c \in (-b , b) \ni: f'(c) = \dfrac{f(b) - f(-b)}{b - (-b)} = \d
 
 Suppose f is continuous on [a,b] and differentiable on (a,b) and $f(a) = f(b)$ then there exists atleast a $c \in (a,b)$ such that $f'(c) = 0$
 
-\section{Applications of Rolle's Theorem}
+\section{Applications R'T}
 
 Show that the function $2x + \cos x$ has exactly one real root.
 
@@ -321,5 +296,39 @@ $f'(x) = 0$ or undefined for c-pts:
 $f'(x) > 0 \Rightarrow f(x)$ is increasing
 
 $f'(x) < 0 \Rightarrow f(x)$ is decreasing
+
+\section{Proof of Sum Law for Limits}
+
+Prove $\displaystyle \lim_{x \to c} f(x) = L \land \lim_{x \to c} g(x) = M \Longrightarrow \lim_{x \to c} [f(x) \pm g(x)] = L \pm M$
+
+Suppose $\displaystyle \lim_{x \to c} f(x) = L \land \lim_{x \to c} g(x) = M$
+
+$\displaystyle \lim_{x \to c} f(x) = L$
+
+$\forall \epsilon_1 > 0, \exists \delta_1 > 0, \ni : 0 < |x - c| <\delta_1 \Longrightarrow |f(x) - L| < \epsilon_1$
+
+\vspace{0.3cm}
+
+$\displaystyle \lim_{x \to c} g(x) = M$
+
+$\forall \epsilon_2 > 0, \exists \delta_2 > 0, \ni : 0 < |x - c| <\delta_1 \Longrightarrow |g(x) - M| < \epsilon_2$
+
+Consider $\epsilon_1, \epsilon_2 = \dfrac{\epsilon}{2}$
+
+There must consequently be a $\delta_1 > 0$ and a $\delta_2 > 0$ such that:
+
+$0 < |x - c| < \delta_1 \Longrightarrow |f(x) - L| < \dfrac{\epsilon}{2}$
+
+$0 < |x - c| < \delta_1 \Longrightarrow |g(x) - M| < \dfrac{\epsilon}{2}$
+
+let $\delta = \min(\delta_1, \delta_2) $ such that $ 0 <|x - c| < \delta \Longrightarrow |f(x) - L| < \dfrac{\epsilon}{2} \land |g(x) - M| < \dfrac{\epsilon}{2}$
+
+$0 <|x - c| < \delta \Longrightarrow |f(x) - L| + |g(x) - M| < \epsilon$
+
+$0 <|x - c| < \delta \Longrightarrow |f(x) - L + (g(x) - M)| \leq |f(x) - L| + |g(x) - M| < \epsilon$
+
+$0 <|x - c| < \delta \Longrightarrow |f(x) + g(x) - (L + M)| < \epsilon$
+
+
 
 \end{document}
