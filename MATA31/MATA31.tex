@@ -174,6 +174,7 @@ $(\tan^{-1} x )' = \displaystyle\frac{1}{1+x^2}$ & $(\cot^{-1} x )' = -\displays
 
 \textbf{Derivatives of common functions}
 
+\vspace{0.3cm}
 
 \begin{minipage}{0.4\textwidth}
   \begin{tabular}{l}
@@ -201,6 +202,8 @@ $\dfrac{d}{dx} f(g) = f'(g) \cdot g'$
 
 \section{Uniqueness of Limits}
 
+\textbf{Theorem.} $\displaystyle \lim_{x \to c} f(x) = L \land \lim_{x \to c} f(x) = M \Longrightarrow L = M$
+
 \begin{center}
 {\renewcommand{\arraystretch}{1.3}
 \begin{tabular}{l}
@@ -219,6 +222,56 @@ Therefore, $\displaystyle \lim_{x \to c} f(x) = L \land \lim_{x \to c} f(x) = M 
 \end{center}
 
 \marginpar{$QED$}
+
+\section{One Sided Limits}
+
+\textbf{Theorem.} $\displaystyle \lim_{x \to c} f(x) = L \Longleftrightarrow \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) = L$
+
+\vspace{0.3cm}
+
+We need to prove that:
+
+\textbf{1. } $\displaystyle \lim_{x \to c} f(x) = L \Rightarrow \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) = L$
+
+\textbf{2. } $\displaystyle \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) = L \Rightarrow \lim_{X\to c} f(x) = L $
+
+\begin{center}
+  \begin{minipage}{0.5\linewidth}
+  {\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{l}
+\textbf{1. }Assume $\displaystyle \lim_{x \to c} f(x) = L$\\
+\hline
+$\forall \epsilon > 0, \exists \delta > 0, \ni: 0 < |x - c| < \delta \Rightarrow |f(x) - L| < \epsilon$\\
+$0 < |x - c| < \delta \equiv x \in (c - \delta, c) \cup (c, c + \delta)$\\
+$x \in (c - \delta, c) \Rightarrow |f(x) - L| < \epsilon$\\
+$x \in (c, c + \delta) \Rightarrow |f(x) - L| < \epsilon$\\
+$\therefore \displaystyle \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) = L$
+\end{tabular}}
+
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}{0.4\linewidth}
+    {\renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{l}
+\textbf{2. }Assume $\displaystyle \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) = L$\\
+\hline
+$\forall \epsilon > 0, \exists \delta_1, \delta_2 > 0, \ni:$\\
+$x \in (c - \delta, c) \lor x \in (c, c + \delta) \Rightarrow |f(x) - L| < \epsilon$\\
+Let $\delta = \min(\delta_1,\delta_2)$\\
+$0 < |x - c| < \delta \Rightarrow |f(x) - L| < \epsilon$\\
+By definition: $\displaystyle \lim_{x \to c} f(x) = L$
+\end{tabular}}
+
+\end{minipage}
+
+\end{center}
+
+\marginpar{$QED$}
+
+
+\pagebreak
+
+\text{}
 
 \section{Mean Value Theorem}
 
@@ -334,5 +387,49 @@ $0 <|x - c| < \delta \Longrightarrow |f(x) + g(x) - (L + M)| < \epsilon$
 Thus: $\displaystyle \lim_{x\to c} f(x) \pm g(x) = L \pm M$
 
 and: $\displaystyle \lim_{x \to c} f(x) = L \land \lim_{x \to c} g(x) = M \Longrightarrow \lim_{x \to c} [f(x) \pm g(x)] = L \pm M$ \marginpar{$QED$}
+
+\section{Proof of Limits and Derivatives}
+
+\begin{minipage}{0.5\linewidth}
+Prove $\displaystyle \lim_{x\to 0} \dfrac{1}{x^2} = \infty$
+
+$\forall M > 0, \exists \delta > 0, \ni : 0 < |x | < \delta \Longrightarrow \dfrac{1}{x^2} > M$
+
+$\dfrac{1}{x^2} > M \rightarrow x^2 < \dfrac{1}{M} \rightarrow x < \sqrt{\dfrac{1}{M}}$
+
+Proof:
+
+Let $\delta = \sqrt{1}{M}$
+
+$|x| < \delta \rightarrow \dfrac{1}{|x|} > {M} \rightarrow \dfrac{1}{|x|^2} > M \rightarrow \dfrac{1}{x^2} > M$
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+Prove $\dfrac{d}{dx}[\ln x] = \dfrac{1}{x}$
+
+$\dfrac{d}{dx}[\ln x] = \displaystyle \lim_{h \to 0} \dfrac{\ln(x + h) - \ln(x)}{h} = \lim_{h \to 0} \dfrac{\ln(\dfrac{x + h}{x})}{h}$
+
+\vspace{0.2cm}
+
+$\displaystyle = \lim_{h \to 0} \dfrac{1 + \dfrac{h}{x}}{h} = \lim_{h \to 0} (\dfrac{1}{h})[\ln(1 + \dfrac{h}{x})] = \lim_{h \to 0} [\ln(1 + \dfrac{h}{x})^{\dfrac{1}{h}}]$
+
+\vspace{0.2cm}
+
+let $n = \dfrac{h}{x}; h = nx; \dfrac{1}{h} = \dfrac{1}{nx}$
+
+\vspace{0.2cm}
+
+$\displaystyle \lim_{x\to 0} [(\ln(1 + n)^{\dfrac{1}{n}})^{\dfrac{1}{x}}] = \lim_{x \to 0} \dfrac{1}{x} \cdot [\ln(1 + n)^{\dfrac{1}{n}}] = \dfrac{1}{x} \cdot \ln e$
+
+$ = \dfrac{1}{x}$
+
+\end{minipage}
+\marginpar{$QED$}
+
+\pagebreak
+
+\text{}
+
+
+
 
 \end{document}
