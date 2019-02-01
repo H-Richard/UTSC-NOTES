@@ -25,7 +25,12 @@
 \begin{center}
   \vspace{5cm}
 
+
+
   \Large {\textbf{Course Notes}}\\
+
+  \Large {Fall 2018}
+
   \hrulefill
   \vspace{0.3cm}
 
@@ -37,7 +42,7 @@
 
   \includegraphics[scale = 0.25]{UTSC}
 
-  \vspace{9cm}
+  \vspace{6cm}
 
   \end{center}
 
@@ -115,7 +120,7 @@ F & F & F & F & T & T\\
 
 \hrulefill
 
-\textbf{\large Implication:}
+\textbf{\large The Implication:}
 
 \begin{center}
 {\textbf{Different ways of writing $P \rightarrow Q$:}}
@@ -175,6 +180,78 @@ Biconditional & $(p \leftrightarrow q) \iff (p \to q) \land (q\to p)$ \\
 \vspace{0.2cm}
 
 1. NOT($\neg$) \hspace{1cm} 2. AND($\land$) \hspace{1cm} 3. OR($\lor$) \hspace{1cm} 4. Quantifiers($\forall/\exists$) \hspace{1cm} 5. ($\rightarrow/\leftrightarrow$)
+
+\pagebreak
+
+\text{}
+
+\section{Rules of Inference}
+
+\begin{center}
+
+\begin{tabular}{l|l|l}
+
+\textbf{Rules} & \textbf{Tautology} & \textbf{Usage}\\
+\hline
+\textbf{Modus Ponens} & $(P \land (P\rightarrow Q))\rightarrow Q$ & \begin{tabular}{l}
+$P$\\
+$P \rightarrow Q$\\
+\hline
+$\therefore Q$\\
+\end{tabular}\\
+
+\hline
+
+\textbf{Hypothetical Syllogism} & $((P \rightarrow Q) \land (Q \rightarrow R)) \rightarrow (P \rightarrow R)$
+&\begin{tabular}{l}
+$P \rightarrow Q$\\
+$Q \rightarrow R$\\
+\hline
+$\therefore P \rightarrow R$\\
+\end{tabular}\\
+
+\hline
+
+\textbf{Conjunction} & $P \land Q \rightarrow P \land Q$ & \begin{tabular}{l}
+$P$\\
+$Q$\\
+\hline
+$\therefore P \land Q$\\
+\end{tabular}\\
+
+\hline
+
+  \textbf{Addition} & $P \rightarrow (P \lor Q)$ & \begin{tabular}{l}
+  $P$\\
+  \hline
+  $\therefore P \lor Q$\\
+  \end{tabular}\\
+
+\hline
+
+  \textbf{Simplification} & $P \land Q \rightarrow P$  & \begin{tabular}{l}
+  $P \land Q$\\
+  \hline
+  $\therefore P$\\
+  \end{tabular}
+
+\end{tabular}
+
+\end{center}
+
+{\scriptsize There are a few more, but I only found these helpful. For the full list of rules of inferences, simply look up `rules of inferences' on google :).}
+
+\subsection{Examples}
+
+\quad Show/Prove $P \land (P \rightarrow Q)$ Concludes $Q$.
+
+\begin{tabular}{l|l}
+1. $P \land (P \rightarrow Q)$ & Given\\
+2. $P$ & Simplification of 1.\\
+3. $P \rightarrow Q$ & Simplification of 1.\\
+4. $Q$ & Modus Ponens 2. and 3.\\
+\end{tabular}
+
 
 \pagebreak
 
@@ -1066,8 +1143,8 @@ and then taking the sum over all n possible values for i
 
 \begin{tabular}{l}
   E(n) = $\displaystyle \sum_{i = 1}^{n} P(\text{k in the ith position}) \cdot N(i)$\\
-= $\displaystyle \sum_{i = 1}^{n} \dfrac{1}{n} \cdot i$\\
-= $\displaystyle \dfrac{1}{n} \cdot \dfrac{n(n+1)}{2} = \dfrac{n(n + 1)}{2}$
+ E(n) = $\displaystyle \sum_{i = 1}^{n} \dfrac{1}{n} \cdot i$\\
+E(n) = $\displaystyle \dfrac{1}{n} \cdot \dfrac{n(n+1)}{2} = \dfrac{n(n + 1)}{2}$
 \end{tabular}
 
 
