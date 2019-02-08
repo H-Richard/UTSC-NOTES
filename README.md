@@ -3,4 +3,6 @@ This project was made to provide everyone with a reliable source of notes for co
 
 Currently contains notes from: CSCA08, CSCA67, MATA31, MATA37, MATA22
 
-More on the way!
+Hilarious pre - Finals traffic peak
+
+![peak](/img/peak.png) 
