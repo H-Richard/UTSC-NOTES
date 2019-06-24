@@ -49,6 +49,8 @@ M - Modified, new local work but not updated.
 
 U - Updated, no new local work since last revision.
 
+D - File deleted, repository file will also be deleted after commit.
+
 G - Merged, new local work since last revision.
 
 C - Conflicted, occurs when local work overlaps with updated server work. 
