@@ -1,3 +1,7 @@
+GitHub doesn't render inline markdown, if you fancy the original notion notes you can find them [here](https://www.notion.so/CSCC11-Reading-1-a45683eeaf394409a43ebab35d24f2c4)
+
+---
+
 # 1 Introduction to Machine Learning
 
 Often, machine learning methods are broken into two phases:
